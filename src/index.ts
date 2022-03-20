@@ -4,6 +4,8 @@ import { scopes } from "./scopes";
 import { currying } from "./currying";
 import { oop } from "./oop";
 import { Contract, contractEnum, UserForHeader } from "./types";
+import { reactive } from "../vueReactive";
+import { _this } from "./this";
 /** array operation */
 const { includes, concat, some, iterator, every, reduce } = use();
 // concat();
@@ -18,5 +20,7 @@ reduce();
 
 // /** const var let */
 // scopes();
+// _this();
 
 // oop();
+reactive();

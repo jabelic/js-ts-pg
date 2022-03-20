@@ -20,23 +20,23 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
-/***/ "./src/asana.ts":
-/*!**********************!*\
-  !*** ./src/asana.ts ***!
-  \**********************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"AsannaList\": () => (/* binding */ AsannaList)\n/* harmony export */ });\n// const fetch = require(\"node-fetch\");\nvar AsannaList = function () {\n    var TOKEN = \"1/1201965840066774:15d97c23e7df6a2409415cca2ce62f58\";\n    var CLIENT_ID = \"1201966344035970\";\n    var CLIENT_SECRET = \"eb9839a6aa0c66d76e5f32f0bf58c58c\";\n    var section_gid = \"1201965907416902\";\n    var project_id = \"1201965907416897\";\n    // リクエストオプションを作成\n    var options = {\n        // GETメソッド\n        method: \"get\",\n        // JSON形式\n        contentType: \"application/json\",\n        // ヘッダ\n        headers: {\n            // 認証情報\n            Authorization: \"Bearer\" + TOKEN,\n        },\n    };\n    var url = \"https://app.asana.com/api/1.0/projects/\" +\n        \"1201965907416897\" +\n        \"/tasks?opt_fields=name,due_on,modified_at,completed\";\n    // var response = fetch(url, options);\n    // const asana = require(\"asana\");\n    // const client = asana.Client.create().useAccessToken(\"ACCESS_TOKEN\");\n    // (async () => {\n    //   const project = await client.tasks.getProject(\"PROJECT_ID\");\n    //   console.log(project);\n    //   const tasks = [\n    //     { name: \"タスク1\", notes: \"タスク1です\" },\n    //     { name: \"タスク2\", notes: \"タスク2です\" },\n    //     { name: \"タスク3\", notes: \"タスク3です\" },\n    //   ].reverse();\n    //   for (let task of tasks) {\n    //     const result = await client.tasks.create({\n    //       ...task,\n    //       projects: [\"PROJECT_ID\"],\n    //     });\n    //     console.log(result);\n    //   }\n    // })();\n};\n\n\n//# sourceURL=webpack://js-ts/./src/asana.ts?");
-
-/***/ }),
-
 /***/ "./src/index.ts":
 /*!**********************!*\
   !*** ./src/index.ts ***!
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _arrays__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./arrays */ \"./src/arrays.ts\");\n/* harmony import */ var _asana__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./asana */ \"./src/asana.ts\");\n/** Twitter(premium)を想定 */\n\n\n/** array operation */\nvar _a = (0,_arrays__WEBPACK_IMPORTED_MODULE_0__.use)(), includes = _a.includes, concat = _a.concat, some = _a.some, iterator = _a.iterator, every = _a.every, reduce = _a.reduce;\n// concat();\n// includes();\n// some();\n// iterator();\n// every();\nreduce();\n// /** currying */\n// currying();\n// /** const var let */\n// scopes();\n// oop();\n(0,_asana__WEBPACK_IMPORTED_MODULE_1__.AsannaList)();\n\n\n//# sourceURL=webpack://js-ts/./src/index.ts?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _arrays__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./arrays */ \"./src/arrays.ts\");\n/* harmony import */ var _vueReactive__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../vueReactive */ \"./vueReactive.ts\");\n/** Twitter(premium)を想定 */\n\n\n/** array operation */\nvar _a = (0,_arrays__WEBPACK_IMPORTED_MODULE_0__.use)(), includes = _a.includes, concat = _a.concat, some = _a.some, iterator = _a.iterator, every = _a.every, reduce = _a.reduce;\n// concat();\n// includes();\n// some();\n// iterator();\n// every();\nreduce();\n// /** currying */\n// currying();\n// /** const var let */\n// scopes();\n// _this();\n// oop();\n(0,_vueReactive__WEBPACK_IMPORTED_MODULE_1__.reactive)();\n\n\n//# sourceURL=webpack://js-ts/./src/index.ts?");
+
+/***/ }),
+
+/***/ "./vueReactive.ts":
+/*!************************!*\
+  !*** ./vueReactive.ts ***!
+  \************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"compositionApi\": () => (/* binding */ compositionApi),\n/* harmony export */   \"reactive\": () => (/* binding */ reactive)\n/* harmony export */ });\n// function ref<T extends object>(raw: T): T extends Ref ? T : Ref<T>;\nvar compositionApi = function () {\n    var Ref = /** @class */ (function () {\n        function Ref(val) {\n            this.val = val;\n            this._val = this.val;\n        }\n        Object.defineProperty(Ref.prototype, \"value\", {\n            get: function () {\n                return this._val;\n            },\n            set: function (val) {\n                this._val = val;\n            },\n            enumerable: false,\n            configurable: true\n        });\n        return Ref;\n    }());\n    function ref(value) {\n        return new Ref(value);\n    }\n    return { ref: ref };\n};\nvar reactive = function () {\n    var ref = compositionApi().ref;\n    var name = ref(\"initial\");\n    console.debug(name.value);\n    name.value = \"値変更\";\n    console.debug(name.value);\n};\n\n\n//# sourceURL=webpack://js-ts/./vueReactive.ts?");
 
 /***/ })
 
