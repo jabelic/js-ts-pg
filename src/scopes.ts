@@ -1,6 +1,8 @@
 /**
  * https://developer.mozilla.org/ja/docs/Web/JavaScript/Closures
  * https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Operators/this
+ * https://numb86-tech.hatenablog.com/entry/2016/08/27/132310
+ *
  */
 /**
  * [MDN]
@@ -19,6 +21,7 @@ export const scopes = () => {
     }
     console.debug(x); // 2
   }
+  /** letはブロックスコープを作る */
   // スコープチェーン: スコープがネストしてる状態のこと
   function letTest() {
     let x = 1;
@@ -79,6 +82,55 @@ export const scopes = () => {
 
   var myFunc = makeFunc();
   myFunc();
+
+  console.debug("===== 巻き上げ =====");
+  /** 巻き上げ */
+  console.log(x); // undefined
+  var x = 0;
+  /** 
+   * same as 
+   * var x;
+    console.log(x); // undefined
+    var x = 0;
+   */
+  var scope = "This is global. var";
+
+  var func0 = function () {
+    console.log(scope); // undefined
+    var scope = "This is local. var.";
+    console.log(scope);
+  };
+
+  func0();
+  // undefined
+  // This is local.
+  let glbl = "This is global. let.";
+
+  var func1 = function () {
+    console.log(glbl); // undefined
+  };
+
+  var func2 = function () {
+    console.log(glbl); // undefined
+    var glbl = "This is local. func2";
+    console.log(glbl);
+  };
+
+  var func3 = function () {
+    console.log(glbl); // ReferenceError: scope is not defined
+    let glbl = "This is local. func3";
+    console.log(glbl);
+  };
+
+  func1();
+  // This is global.
+
+  func2();
+  // undefined
+  // This is local.
+
+  func3();
+  // ReferenceError: scope is not defined
 };
 
 /** browswerなどでは以下のように, varのみthisにbindされる */

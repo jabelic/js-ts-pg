@@ -29,6 +29,7 @@ export const compositionApi = () => {
 };
 
 export const reactive = () => {
+  console.debug("===== vue-reactive =====");
   const { ref } = compositionApi();
   const name = ref<string>("initial");
   console.debug(name.value);
