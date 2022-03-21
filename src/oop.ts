@@ -26,4 +26,5 @@ export const oop = () => {
 
   var o = { a: 37, f: f, g: g, h: h };
   console.debug(o.a, o.f(), o.g(), o.h()); // 37,37, azerty, azerty
+  // console.debug(Example.prototype); // { first: [Function (anonymous)], second: [Function (anonymous)] }
 };

@@ -1,4 +1,5 @@
 export const _this = () => {
+  console.debug("===== bind call apply =====");
   const numbers = [5, 6, 2, 3, 7];
   const max = Math.max.apply(null, numbers);
   console.log(max);
