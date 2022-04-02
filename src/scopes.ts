@@ -116,11 +116,11 @@ export const scopes = () => {
     console.log(glbl);
   };
 
-  var func3 = function () {
-    console.log(glbl); // ReferenceError: scope is not defined
-    let glbl = "This is local. func3";
-    console.log(glbl);
-  };
+  // var func3 = function () {
+  //   console.log(glbl); // ReferenceError: scope is not defined
+  //   let glbl = "This is local. func3";
+  //   console.log(glbl);
+  // };
 
   func1();
   // This is global.
@@ -129,7 +129,7 @@ export const scopes = () => {
   // undefined
   // This is local.
 
-  func3();
+  // func3();
   // ReferenceError: scope is not defined
 };
 

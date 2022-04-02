@@ -24,6 +24,6 @@ import { promise } from "./promise";
 /** OOP/this */
 // _this();
 
-oop();
-promise();
-// reactive();
+// oop();
+// promise();
+reactive();
