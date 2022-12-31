@@ -21,9 +21,10 @@ import { promise } from "./promise";
 
 // /** const var let */
 // scopes();
+
 /** OOP/this */
-// _this();
+_this();
 
 // oop();
 // promise();
-reactive();
+// reactive();
