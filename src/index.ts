@@ -7,6 +7,7 @@ import { Contract, contractEnum, UserForHeader } from "./types";
 import { _this } from "./this";
 import { reactive } from "./vueReactive";
 import { promise } from "./promise";
+import { useBlob } from "./blob";
 /** array operation */
 // const { includes, concat, some, iterator, every, reduce } = use();
 // concat();
@@ -23,8 +24,9 @@ import { promise } from "./promise";
 // scopes();
 
 /** OOP/this */
-_this();
+// _this();
 
 // oop();
 // promise();
 // reactive();
+// useBlob();
