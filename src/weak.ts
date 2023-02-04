@@ -1,0 +1,8 @@
+/**
+ * WeakMap
+ * WeakSet
+ */
+
+const weak = () => {
+    
+}
