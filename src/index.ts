@@ -10,6 +10,8 @@ import { promise } from "./promise";
 import { useBlob } from "./blob";
 import { generator } from "./generator";
 import { iter } from "./iter";
+import { symbol } from "./symbol";
+import { objs } from "./Object";
 /** array operation */
 // const { includes, concat, some, iterator, every, reduce } = use();
 // concat();
@@ -33,4 +35,6 @@ import { iter } from "./iter";
 // reactive();
 // useBlob();
 // generator();
-iter()
+// iter()
+// symbol()
+objs()

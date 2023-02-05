@@ -41,7 +41,7 @@ export const iter = ()=> {
     for(var v of obj) console.log(v);
     /** 1 2 3 4 5 6 7 8 9 10 */
 
-    var obj2 = ["A", "B", "C"]; // イテラブルなオブジェクト
+    var obj2:any = ["A", "B", "C"]; // イテラブルなオブジェクト
     var iterator2 = obj2[Symbol.iterator](); // イテレータを取得する
     for(var v of iterator2) console.log(v); // for-of にイテレータを渡す
     // [Symbol.iterator]() は自分自身を返す
