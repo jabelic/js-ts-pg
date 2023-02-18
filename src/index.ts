@@ -12,6 +12,7 @@ import { generator } from "./generator";
 import { iter } from "./iter";
 import { symbol } from "./symbol";
 import { objs } from "./Object";
+import { typedArray } from "./typedArray";
 /** array operation */
 // const { includes, concat, some, iterator, every, reduce } = use();
 // concat();
@@ -37,4 +38,5 @@ import { objs } from "./Object";
 // generator();
 // iter()
 // symbol()
-objs()
+// objs()
+typedArray()
